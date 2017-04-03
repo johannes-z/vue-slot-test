@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>vue-slot-test</title>
+  </head>
+  <body>
+    <app id="app"></app>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.min.js"></script>
+    <script>
+      require(['/dist/build.js'], (components) => {
+        new components.Vue({
+          el: '#app',
+          components: {
+            App: components.App
+          }
+        })
+      })
+    </script>
+  </body>
+</html>
